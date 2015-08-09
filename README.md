@@ -2,6 +2,8 @@
 
 Boot task for file revisions (Naming files by version, hash etc.)
 
+![Clojars Project](http://clojars.org/mrmcc3/boot-rev/latest-version.svg)
+
 ### Usage
 
 in build.boot
