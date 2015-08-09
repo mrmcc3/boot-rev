@@ -1,0 +1,8 @@
+/.lein-*
+/target
+
+/.idea
+*.iml
+
+/project.clj
+.nrepl-history
