@@ -33,7 +33,7 @@
             reducer! (fn [m f]
                        (let [in-path (tmp-path f)
                              out-path (versioner f)]
-                         (info "- %s -> %s\n" in-path out-path)
+                         (info "• %s ⇒  %s\n" in-path out-path)
                          (spit (io/file tmp out-path) (slurp (tmp-file f)))
                          (assoc m out-path {:original-path in-path})))
             meta-map (reduce reducer! {} files-to-rev)]
