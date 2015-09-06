@@ -35,7 +35,8 @@
                              out-path (versioner f)]
                          (info "• %s ⇒  %s\n" in-path out-path)
                          (spit (io/file tmp out-path) (slurp (tmp-file f)))
-                         (assoc m out-path {:original-path in-path})))
+                         (assoc m out-path {:original-path in-path
+                                            :reved true})))
             meta-map (reduce reducer! {} files-to-rev)]
         (-> fileset
             (add-resource tmp)
