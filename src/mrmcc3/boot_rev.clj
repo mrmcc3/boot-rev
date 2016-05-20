@@ -18,7 +18,7 @@
   characters of the md5 hash as calculated by boot. Alternatively a constant version value can be
   supplied. For custom versioning a symbol can be provided which will be resolved and invoked
   with the tmpfile to produce a version."
-  [f files #{regex} "only files that match one of the supplied regexs will be versioned"
+  [f files VAL #{regex} "only files that match one of the supplied regexs will be versioned"
    v version VER str "supply a constant version value to all files"
    s sym SYM sym "a symbol to be resolved and invoked along with the tmpfile to produce the version"
    c copy bool "if true will create versioned copies otherwise it will replace the initial files"]
@@ -34,6 +34,7 @@
                        (let [in-path (tmp-path f)
                              out-path (versioner f)]
                          (info "• %s ⇒  %s\n" in-path out-path)
+                         (io/make-parents (io/file tmp out-path))
                          (spit (io/file tmp out-path) (slurp (tmp-file f)))
                          (assoc m out-path {:original-path in-path
                                             :reved true})))
