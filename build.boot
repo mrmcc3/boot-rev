@@ -1,14 +1,14 @@
 (def +project+ 'mrmcc3/boot-rev)
-(def +version+ "0.1.0-SNAPSHOT")
+(def +version+ "0.1.0")
 
 (set-env!
   :project +project+
   :version +version+
   :asset-paths #{"demo-assets"}
   :source-paths #{"src"}
-  :dependencies '[[org.clojure/clojure "1.7.0" :scope "provided"]
-                  [boot/core "2.2.0" :scope "provided"]
-                  [adzerk/bootlaces "0.1.11" :scope "test"]])
+  :dependencies '[[org.clojure/clojure "1.8.0" :scope "provided"]
+                  [boot/core "2.5.5" :scope "provided"]
+                  [adzerk/bootlaces "0.1.13" :scope "test"]])
 
 (require '[adzerk.bootlaces :refer :all]
          '[mrmcc3.boot-rev :refer [rev]])

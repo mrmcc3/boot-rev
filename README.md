@@ -10,7 +10,7 @@ Boot task for file revisions (Naming files by version, hash etc.)
 Use in `build.boot`:
 
 ```clj
-(set-env! :dependencies '[[mrmcc3/boot-rev "0.1.0-SNAPSHOT"]])
+(set-env! :dependencies '[[mrmcc3/boot-rev "0.1.0"]])
 (require '[mrmcc3.boot-rev :refer [rev]])
 
 ;; fingerprint all js files
