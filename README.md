@@ -3,7 +3,7 @@
 
 Boot task for file revisions (Naming files by version, hash etc.)
 
-![Clojars Project](http://clojars.org/mrmcc3/boot-rev/latest-version.svg)
+[![Clojars Project](https://img.shields.io/clojars/v/mrmcc3/boot-rev.svg)](https://clojars.org/mrmcc3/boot-rev)
 
 ### Usage
 
